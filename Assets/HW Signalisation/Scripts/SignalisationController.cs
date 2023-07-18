@@ -4,7 +4,7 @@ using UnityEngine;
 public class SignalisationController : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private float _fadeDuration;
+    [SerializeField] private float _fadeDuration = 2;
 
     private Coroutine _activeVolumeCoroutine;
 

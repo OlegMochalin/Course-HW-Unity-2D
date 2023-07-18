@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SignalisationController))]
-public class Signalisation : MonoBehaviour
+public class RobberDetector : MonoBehaviour
 {
     private bool _isRobberInside;
     private SignalisationController _signalisationController;

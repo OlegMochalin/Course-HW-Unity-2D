@@ -135,40 +135,15 @@ GameObject:
   - component: {fileID: 215304539}
   - component: {fileID: 215304538}
   - component: {fileID: 215304541}
-  - component: {fileID: 215304537}
-  - component: {fileID: 215304536}
+  - component: {fileID: 215304542}
+  - component: {fileID: 215304543}
   m_Layer: 0
-  m_Name: player-idle-1
+  m_Name: Robber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &215304536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215304535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6161b1a8f88aeb74b85d2da10f186ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &215304537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215304535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceacda7233c74aa448f1785c926b6793, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1272742252}
 --- !u!61 &215304538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -283,6 +258,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &215304542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215304535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6161b1a8f88aeb74b85d2da10f186ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &215304543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215304535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceacda7233c74aa448f1785c926b6793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1272742252}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ GameObject:
   - component: {fileID: 1409366624}
   - component: {fileID: 1409366623}
   m_Layer: 0
-  m_Name: house
+  m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065145493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2747ada2c4021384ca6dc5829ea1d84e, type: 3}
+  m_Script: {fileID: 11500000, guid: fb91dab8c988d3e42a1fcb0e1e9813a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 2065145495}

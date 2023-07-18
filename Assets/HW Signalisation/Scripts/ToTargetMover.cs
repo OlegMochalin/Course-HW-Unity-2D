@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TargetMover : MonoBehaviour
+public class ToTargetMover : MonoBehaviour
 {
     [SerializeField] private Transform target;
 
