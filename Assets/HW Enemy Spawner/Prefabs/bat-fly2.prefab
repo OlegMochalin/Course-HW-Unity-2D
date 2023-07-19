@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368311166788175888}
   - component: {fileID: 8546714273010725045}
+  - component: {fileID: 2736910613163774882}
   - component: {fileID: 8195102919199750428}
   m_Layer: 0
   m_Name: bat-fly2
@@ -85,6 +86,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2736910613163774882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757624698111530163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de45632e08c76414bb17cda6507d5845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8195102919199750428
 MonoBehaviour:
   m_ObjectHideFlags: 0

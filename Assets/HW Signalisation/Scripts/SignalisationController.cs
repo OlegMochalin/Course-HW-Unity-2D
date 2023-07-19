@@ -22,9 +22,11 @@ public class SignalisationController : MonoBehaviour
     }
 
     private IEnumerator ChangeVolume(bool IsRobberInside)
-    {        
+    {
+        float minVolume = 0;
+        float maxVolume = 1;
         float startVolume = _audioSource.volume;
-        float targetVolume = IsRobberInside == true ? 1 : 0;
+        float targetVolume = IsRobberInside == true ? maxVolume : minVolume;
         float runTime = 0;
 
         if (IsRobberInside == true && _audioSource.isPlaying == false)
