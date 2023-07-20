@@ -431,8 +431,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1795012013}
-  - component: {fileID: 1795012015}
   - component: {fileID: 1795012014}
+  - component: {fileID: 1795012015}
   m_Layer: 0
   m_Name: Enemy Spawn Points
   m_TagString: Untagged

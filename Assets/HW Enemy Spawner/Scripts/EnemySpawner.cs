@@ -11,11 +11,14 @@ public class EnemySpawner : MonoBehaviour
     private EnemyTarget _enemyTarget;
     private EnemySpawnPoint[] _spawnPoints;
 
-    void Awake()
+    private void Awake()
     {
         _enemyTarget = GetComponent<EnemyTarget>();
         _spawnPoints = GetComponentsInChildren<EnemySpawnPoint>();
+    }
 
+    private void Start()
+    {
         StartCoroutine(SpawnEnemies());
     }
 
@@ -38,8 +41,6 @@ public class EnemySpawner : MonoBehaviour
                     startSpawnPoint = 0;
                 }
             }            
-
-            Debug.Log(Time.time);
 
             yield return waitForSeconds;
         }

@@ -1,11 +1,12 @@
 using UnityEngine;
 
+[RequireComponent (typeof(Animator))]
 public class EnemyMover : MonoBehaviour
 {
+    private const string BatFlyAnimation = "Bat_fly";
+
     [SerializeField] private Transform _patrolPath;
     [SerializeField] private float _speed = 2;
-
-    private const string BatFlyAnimation = "Bat_fly";
 
     private Transform[] _pathPoints;
     private Animator _animator;
@@ -22,7 +23,7 @@ public class EnemyMover : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         _animator.Play(BatFlyAnimation);
 

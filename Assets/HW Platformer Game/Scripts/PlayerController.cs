@@ -3,17 +3,19 @@ using UnityEngine;
 
 [RequireComponent (typeof(BoxCollider2D))]
 [RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent (typeof(Animator))]
+[RequireComponent (typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float _speed = 2;
-    [SerializeField] private float _jumpForce = 10;
-    [SerializeField] private LayerMask _platformLayerMask;
-
     private const string IdleAnimation = "Player_idle";
     private const string RunAnimation = "Player_run";
     private const string JumpAnimation = "Player_jump";
     private const string FallAnimation = "Player_fall";
     private const string HurtAnimation = "Player_hurt";
+
+    [SerializeField] private float _speed = 2;
+    [SerializeField] private float _jumpForce = 10;
+    [SerializeField] private LayerMask _platformLayerMask;
 
     private Rigidbody2D _rigidbody2D;
     private BoxCollider2D _boxCollider2D;
@@ -24,12 +26,12 @@ public class PlayerController : MonoBehaviour
     private bool _isHurt = false;
     private float _hurtDuration = 1f;
 
-    private void Start()
+    private void Awake()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
-        _spriterenderer = GetComponent<SpriteRenderer>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _spriterenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
                 _isGrounded = true;
             }                
 
-            if (Input.GetKey("a"))
+            if (Input.GetKey(KeyCode.A))
             {
                 if(colliderOnLeft == null)
                 {
@@ -71,7 +73,7 @@ public class PlayerController : MonoBehaviour
                     _animator.Play(RunAnimation);
                 }
             }
-            else if (Input.GetKey("d"))
+            else if (Input.GetKey(KeyCode.D))
             {
                 if (colliderOnRight == null)
                 {
