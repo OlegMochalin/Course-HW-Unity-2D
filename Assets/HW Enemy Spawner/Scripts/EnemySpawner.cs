@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < _enemiesAmount; i++)
         {
-            Enemy enemy = Instantiate(_enemyPrefabs[0], _spawnPoints[startSpawnPoint].GetComponent<Transform>().position, transform.rotation);
+            Enemy enemy = Instantiate(_enemyPrefabs[0], _spawnPoints[startSpawnPoint].transform.position, transform.rotation);
             enemy.GetTarget(_enemyTarget);
 
             if (startSpawnPoint < _spawnPoints.Length)
