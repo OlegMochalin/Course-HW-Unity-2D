@@ -17,19 +17,13 @@ public class Health : MonoBehaviour
     {
          _health += healValue;
 
-        if (_health >= _healthMax)
-        {
-            _health = _healthMax;
-        }
+        _health = Mathf.Clamp(_health, _healthMin, _healthMax);
     }
 
     public void GetDamage(float damage)
     {
         _health -= damage;
 
-        if (_health <= _healthMin)
-        {
-            _health = _healthMin;
-        }
+        _health = Mathf.Clamp(_health, _healthMin, _healthMax);
     }
 }

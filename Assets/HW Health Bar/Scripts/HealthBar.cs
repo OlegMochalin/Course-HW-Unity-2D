@@ -8,8 +8,8 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Health _health;
     [SerializeField] private float _barChangeTime = 0.5f;
 
-    private float _healthValueMin = 0;
-    private float _healthValueMax = 100;
+    private float _healthPercentMin = 0;
+    private float _healthPercentMax = 100;
     private float targetValue;
 
     private Slider _healthBarSlider;        
@@ -23,12 +23,12 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
-        _healthBarSlider.minValue = _healthValueMin;
-        _healthBarSlider.maxValue = _healthValueMax;
+        _healthBarSlider.minValue = _healthPercentMin;
+        _healthBarSlider.maxValue = _healthPercentMax;
         _healthBarSlider.value = _health.HealthPercent;        
     }
 
-    public void Update()
+    public void OnButonClick()
     {
         if (targetValue != _health.HealthPercent)
         {
@@ -45,7 +45,7 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator ChangeHPBarFilling(float targetValue)
     {
-        float startValue = GetComponent<Slider>().value;
+        float startValue = _healthBarSlider.value;
         float runTime = 0;
 
         while (runTime < _barChangeTime)
