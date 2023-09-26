@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
         _healthBarSlider.value = _health.HealthPercent;        
     }
 
-    public void OnButonClick()
+    public void OnButtonClick()
     {
         if (targetValue != _health.HealthPercent)
         {

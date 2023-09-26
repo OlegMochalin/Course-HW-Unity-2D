@@ -11,7 +11,7 @@ public class Damager : MonoBehaviour
         _hitPoints = GetComponent<Health>();
     }
 
-    public void OnButonClick()
+    public void OnButtonClick()
     {
         _hitPoints.GetDamage(_damageValue);
     }

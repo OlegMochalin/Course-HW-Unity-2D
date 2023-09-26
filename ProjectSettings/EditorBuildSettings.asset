@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HW Signalisation.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/HW Runner Game/Scenes/HW Runner Game.unity
+    guid: 08ada610e61ddd34cb12538038e1c27b
   m_configObjects: {}
