@@ -10,7 +10,6 @@ namespace HWRunnerGame
         public event UnityAction<float> HealthChanged;
         public event UnityAction Died;
 
-
         private void Start()
         {
             HealthChanged?.Invoke(_health);
