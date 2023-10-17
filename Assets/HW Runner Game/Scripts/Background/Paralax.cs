@@ -6,7 +6,7 @@ namespace HWRunnerGame
     [RequireComponent(typeof(RawImage))]
     public class Paralax : MonoBehaviour
     {
-        [SerializeField] float _speed;
+        [SerializeField] private float _speed;
 
         private RawImage _image;
         private float _imagePositionX;

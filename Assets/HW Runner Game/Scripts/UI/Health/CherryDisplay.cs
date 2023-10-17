@@ -7,7 +7,7 @@ namespace HWRunnerGame
 {
     public class CherryDisplay : MonoBehaviour
     {
-        [SerializeField] float _lerpDuration;
+        [SerializeField] private float _lerpDuration;
 
         private Image _image;
 

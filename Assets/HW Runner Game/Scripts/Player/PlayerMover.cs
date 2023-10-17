@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HWRunnerGame 
 {
     [RequireComponent(typeof(Player))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerMover : MonoBehaviour
     {
         [SerializeField] private float _moveSpeed;
                 
@@ -12,7 +12,7 @@ namespace HWRunnerGame
         private float _maxYPosition = 3;
         private float _stepSize = 1;
 
-        void Start()
+        private void Start()
         {
             _targetPosition = transform.position;
         }

@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace HWRunnerGame
 {
-    public class SpawnedObjectController : MonoBehaviour
+    public class SpawnedObjectMover : MonoBehaviour
     {
         [SerializeField] private float _speed;
 
-        void Update()
+        private void Update()
         {
             transform.Translate(Vector3.left * _speed * Time.deltaTime);
         }
