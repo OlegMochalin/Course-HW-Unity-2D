@@ -1,19 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyTarget))]
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private Enemy[] _enemyPrefabs;
-    [SerializeField] private int _enemiesAmount = 10;
+    [SerializeField] private int _enemiesAmount = 12;
     [SerializeField] private float _spawnDelay = 2;
 
-    private EnemyTarget _enemyTarget;
     private EnemySpawnPoint[] _spawnPoints;
 
     private void Awake()
     {
-        _enemyTarget = GetComponent<EnemyTarget>();
         _spawnPoints = GetComponentsInChildren<EnemySpawnPoint>();
     }
 
@@ -25,20 +21,19 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnEnemies()
     {
         var waitForSeconds = new WaitForSeconds(_spawnDelay);
-        int startSpawnPoint = 0;
+        int spawnPoint = 0;
 
         for (int i = 0; i < _enemiesAmount; i++)
         {
-            Enemy enemy = Instantiate(_enemyPrefabs[0], _spawnPoints[startSpawnPoint].transform.position, transform.rotation);
-            enemy.GetTarget(_enemyTarget);
+            _spawnPoints[spawnPoint].SpawnEnemy();
 
-            if (startSpawnPoint < _spawnPoints.Length)
+            if (spawnPoint < _spawnPoints.Length)
             {
-                startSpawnPoint++;
+                spawnPoint++;
 
-                if (startSpawnPoint >= _spawnPoints.Length)
+                if (spawnPoint >= _spawnPoints.Length)
                 {
-                    startSpawnPoint = 0;
+                    spawnPoint = 0;
                 }
             }            
 
