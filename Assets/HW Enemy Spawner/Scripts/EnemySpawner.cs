@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -21,21 +22,12 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnEnemies()
     {
         var waitForSeconds = new WaitForSeconds(_spawnDelay);
-        int spawnPoint = 0;
+        int spawnPoint;
 
         for (int i = 0; i < _enemiesAmount; i++)
         {
-            _spawnPoints[spawnPoint].SpawnEnemy();
-
-            if (spawnPoint < _spawnPoints.Length)
-            {
-                spawnPoint++;
-
-                if (spawnPoint >= _spawnPoints.Length)
-                {
-                    spawnPoint = 0;
-                }
-            }            
+            spawnPoint = Random.Range(0, _spawnPoints.Length);
+            _spawnPoints[spawnPoint].SpawnEnemy();      
 
             yield return waitForSeconds;
         }
