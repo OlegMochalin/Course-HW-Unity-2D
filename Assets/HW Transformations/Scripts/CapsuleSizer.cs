@@ -8,6 +8,6 @@ public class CapsuleSizer : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale = new Vector2(Mathf.PingPong(Time.time, _maxSize - _minSize) + _minSize, Mathf.PingPong(Time.time, _maxSize - _minSize) + _minSize);
+        transform.localScale = new Vector2(Mathf.PingPong(Time.time * _speed, _maxSize - _minSize) + _minSize, Mathf.PingPong(Time.time * _speed, _maxSize - _minSize) + _minSize);
     }
 }
